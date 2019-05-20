@@ -1,4 +1,5 @@
 #!groovy
+import groovy.json.JsonOutput
 
 pipeline{
 	agent any
@@ -29,8 +30,8 @@ pipeline{
         					"""{
          					  "files": [
            					   {
-              					     "pattern": "bazinga-repo/froggy-files/",
-              					     "target": "bazinga/,
+              					     "pattern": "Maven_repo/*.war",
+              					     "target": " C:\\Users\\qw693\\Documents\\Devops_tools\\apache-tomcat-8.5.40\\webapps",
            					   }
          					]
         					}"""
