@@ -23,7 +23,20 @@ pipeline{
 		}
 		stage('Deploy to Tomcat'){
 			steps{
-				bat 'copy "C:\\Program Files (x86)\\Jenkins\\workspace\\test\\target\\*.war" C:\\Users\\qw693\\Documents\\Devops_tools\\apache-tomcat-8.5.40\\webapps'
+				rtDownload (
+   					serverId: "Jfrog",
+    					spec:
+        					"""{
+         					  "files": [
+           					   {
+              					     "pattern": "bazinga-repo/froggy-files/",
+              					     "target": "bazinga/,
+           					   }
+         					]
+        					}"""
+					)
+				
+				//bat 'copy "C:\\Program Files (x86)\\Jenkins\\workspace\\test\\target\\*.war" C:\\Users\\qw693\\Documents\\Devops_tools\\apache-tomcat-8.5.40\\webapps'
 			}
 		}
 	}
