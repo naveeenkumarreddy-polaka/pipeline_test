@@ -28,10 +28,10 @@ pipeline{
    					serverId: "Jfrog",
     					spec:
         					"""{
-         					  files: 
+         					  "files": 
            					   {
-              					     pattern: "Maven_repo/*.war",
-              					     target: " C:\\Users\\qw693\\Documents\\Devops_tools\\apache-tomcat-8.5.40\\webapps",
+              					     "pattern": "Maven_repo/*.war",
+              					     "target": " C:\\Users\\qw693\\Documents\\Devops_tools\\apache-tomcat-8.5.40\\webapps",
            					   }
          					
         					}"""
